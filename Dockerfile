@@ -1,7 +1,6 @@
 FROM alpine:latest
 
-MAINTAINER <dev@dschwarz.codes>
-
 RUN apk update && apk upgrade && apk add bash openssh
+RUN eval $(ssh-agent -s)
 
 CMD bash
